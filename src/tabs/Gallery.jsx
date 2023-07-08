@@ -45,9 +45,9 @@ export class Gallery extends Component {
         images: [...prevState.images, ...photos],
         isVisible: currentPage < Math.ceil(total_results / per_page),
       }));
-      console.log(total_results / per_page);
-      console.log(total_results);
-      console.log(per_page);
+      // console.log(total_results / per_page);
+      // console.log(total_results);
+      // console.log(per_page);
     } catch (error) {
       this.setState({ error: error.message });
     } finally {
@@ -56,14 +56,24 @@ export class Gallery extends Component {
   };
 
   onHandleSubmit = (value) => {
-    this.setState({ query: value });
+    this.setState({ query: value, images:[],page:1 });
+
   };
 
+  onLoadMore = () =>{
+    this.setState(prevState=>(
+      {page:prevState.page+1}
+      ))
+  };
+
+
   render() {
-    const { images } = this.state;
+    const { images, isVisible, isLoading, isEmpty, error } = this.state;
     return (
       <>
         <SearchForm onSubmit={this.onHandleSubmit} />
+        {isEmpty && <Text textAlign="center">Sorry. There are no images ... 😭</Text>}
+        {error && <Text textAlign="center">❌ Something went wrong - {error}</Text>}
         <Grid>
           {images.length > 0 &&
             images.map(({ id, avg_color, alt, src }) => (
@@ -74,7 +84,7 @@ export class Gallery extends Component {
               </GridItem>
             ))}
         </Grid>
-        <Text textAlign="center">Sorry. There are no images ... 😭</Text>
+        {isVisible && <Button onClick={this.onLoadMore}>{isLoading? 'Loading...':'Load More'}</Button>}
       </>
     );
   }
