@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import * as ImageService from 'service/image-service';
 import { Button, SearchForm, Grid, GridItem, Text, CardItem } from 'components';
-import { IoImage } from 'react-icons/io5';
+//import { IoImage } from 'react-icons/io5';
 
 export class Gallery extends Component {
   state = {
