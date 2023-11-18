@@ -1,17 +1,17 @@
-# Заняття 2. План
+# Lesson 2. Plan
 
 - Kahoot
-- Питання-відповідь
-- Практичне заняття
+- Q&A Session
+- Practical Session
 
-> Перед початком практики ознайомитись з бібліотекою
-> [react-tabs](https://www.npmjs.com/package/react-tabs), яка використовується в
-> **Basic Example** в Арр для розділення двох завдань. Також потрібно буде
-> отримати ключ з ресурсу [pexels](https://www.pexels.com/api/) - для роботи з
-> вправою Пошук зображень. В обох завданнях будемо перевикористовувати
-> компоненти `<SearchFormStyled/>` та styled-components `Grid` та `GridItem`
+> Before starting the practical session, familiarize yourself with the library
+> [react-tabs](https://www.npmjs.com/package/react-tabs), used in the
+> **Basic Example** in the App to separate the two tasks. You'll also need to
+> obtain a key from [pexels](https://www.pexels.com/api/) - for working with
+> the Image Search exercise. In both tasks, we'll be reusing
+> components `<SearchFormStyled/>` and styled-components `Grid` and `GridItem`
 
-## Завдання
+## Tasks
 
-- [Завдання 1 - Пошук зображень](./task%231.md)
-- [Завдання 2 - TODO LIST](./task%232.md)
+- [Task 1 - Image Search](./task%231.md)
+- [Task 2 - TODO LIST](./task%232.md)
